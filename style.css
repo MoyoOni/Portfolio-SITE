@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Reset and base styles */
 * {
     margin: 0;
@@ -526,5 +527,148 @@ section h2::after {
     
     .container {
         padding: 0 15px;
+=======
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f8fa;
+}
+
+nav {
+    background: #6c63ff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 40px 20px;
+    border-bottom: 1px solid #eee;
+    max-width: 700px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(108,99,255,0.07);
+}
+
+h1, h2 {
+    color: #6c63ff;
+    margin-bottom: 15px;
+}form {
+    background: #f3f4fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(108,99,255,0.09);
+    max-width: 400px;
+}
+
+label {
+    font-weight: bold;
+    color: #6c63ff;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 18px;
+    border: 1px solid #6c63ff;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    background: #6c63ff;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 23px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #4a44e6;
+}
+
+/* Portfolio card styles */
+#portfolio ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+}
+
+#portfolio li {
+    background: #f4f6ff;
+    border: 1px solid #6c63ff33;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(108,99,255,0.07);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+#portfolio img {
+    border-radius: 8px;
+    max-width: 100%;
+    margin-bottom: 14px;
+}
+
+#portfolio ul { ... }
+#portfolio li { ... }
+#portfolio img { ... }
+
+form { ... }
+label { ... }
+input, textarea { ... }
+button { ... }
+button:hover { ... }
+
+/* Responsive design for mobile devices */
+@media (max-width: 700px) {
+    nav {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    section {
+        padding: 20px 8px;
+        margin: 12px;
+        max-width: 95vw;
+    }
+
+    #portfolio ul {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+    #portfolio li {
+        width: 90vw;
+    }
+
+    form {
+        max-width: 100%;
+>>>>>>> 229543b (Add portrait image and use local photo in portfolio)
     }
 }
