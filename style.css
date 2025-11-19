@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* Reset and base styles */
 * {
     margin: 0;
@@ -528,6 +529,8 @@ section h2::after {
     .container {
         padding: 0 15px;
 =======
+=======
+>>>>>>> 229543b750fb2c56fe927b8b1f90a9c1b9cca3bc
 body {
     font-family: 'Poppins', Arial, sans-serif;
 }
@@ -669,6 +672,9 @@ button:hover { ... }
 
     form {
         max-width: 100%;
+<<<<<<< HEAD
 >>>>>>> 229543b (Add portrait image and use local photo in portfolio)
+=======
+>>>>>>> 229543b750fb2c56fe927b8b1f90a9c1b9cca3bc
     }
 }
