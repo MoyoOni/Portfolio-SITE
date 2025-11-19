@@ -2,22 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moyo Oni | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <a href="#hero">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="#home">Moyo Oni</a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-    <section id="hero">
-        <h1>Hello, I'm Moyo Oni!</h1>
-        <p>Welcome to my portfolio website.</p>
+        <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Hi, I'm <span class="highlight">Moyo Oni</span></h1>
+                <h2>Creative Designer & Web Developer</h2>
+                <p>Welcome to my portfolio! I'm passionate about creating beautiful and functional digital experiences through web design, digital art, and creative projects.</p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-placeholder">Profile Image</div>
+            </div>
+        </div>
     </section>
 
     <section id="about">
@@ -27,50 +65,114 @@
         </p>
     </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML & CSS</li>
-            <li>Web Design</li>
-            <li>Digital Art</li>
-            <li>Writing</li>
-            <li>Project Management</li>
-            <li>Continuous Learning</li>
-        </ul>
+        <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Web Design</h3>
+                    <p>Creating beautiful, responsive websites with modern design principles</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Digital Art</h3>
+                    <p>Creating stunning visual content using digital tools and techniques</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Writing</h3>
+                    <p>Communicating ideas effectively through compelling written content</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Project Management</h3>
+                    <p>Organizing and executing projects efficiently from concept to completion</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <ul>
-            <li>
-                <strong>My First Website</strong><br>
-                <img src="https://via.placeholder.com/300x180?text=Project+Image" alt="My First Website" width="300"><br>
-                <span>A simple website I built using HTML and CSS.</span>
-            </li>
-            <li>
-                <strong>Artwork: Sunrise</strong><br>
-                <img src="https://via.placeholder.com/300x180?text=Artwork" alt="Sunrise Art" width="300"><br>
-                <span>Digital painting created in 2023.</span>
-            </li>
-            <!-- Add more items as you create! -->
-        </ul>
+        <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder">Project Image</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>My First Website</h3>
+                        <p>A simple website I built using HTML and CSS to learn the fundamentals of web development.</p>
+                        <a href="#" class="project-link">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder">Artwork</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Artwork: Sunrise</h3>
+                        <p>Digital painting created in 2023 showcasing my artistic skills and creativity.</p>
+                        <a href="#" class="project-link">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="placeholder">Portfolio Design</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Personal Portfolio</h3>
+                        <p>A modern, responsive portfolio website showcasing my design and development skills.</p>
+                        <a href="#" class="project-link">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <form>
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" placeholder="Your name"><br><br>
-            
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" placeholder="your@email.com"><br><br>
-            
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" placeholder="Type your message here"></textarea><br><br>
-            
-            <button type="submit">Send</button>
-        </form>
-        <p>Or email me at: <strong>youremail@example.com</strong></p>
+        <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Feel free to reach out if you're looking for a designer, developer, or creative collaborator.</p>
+                    <div class="contact-details">
+                        <p><strong>Email:</strong> youremail@example.com</p>
+                        <p><strong>Location:</strong> Your Location</p>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Moyo Oni. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
