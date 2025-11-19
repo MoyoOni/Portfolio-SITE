@@ -5,6 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {},
+        {},
+
+        {
+            "name": "Launch Edge",
+            "request": "launch",
+            "type": "msedge",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        },
+        {},
         {
             "name": "Launch",
             "type": "lldb",
@@ -14,4 +24,9 @@
             "cwd": "${workspaceRoot}"
         }
     ]
-}
+}chore(vscode): add initial launch configuration
+
+- Create .vscode directory and add launch.json file
+- Set up basic LLDB configuration for debugging
+- Include placeholders for program path and arguments
+fix(layout): correct the orientation of the layout
