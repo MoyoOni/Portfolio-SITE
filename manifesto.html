@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ifá-Omolúàbí Manifesto | Moyo ONI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #manifesto {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9ff 0%, #e6e9ff 100%);
+            min-height: 100vh;
+        }
+        
+        .manifesto-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .manifesto-content h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .manifesto-content h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 70px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+        
+        .manifesto-content h3 {
+            font-size: 1.4rem;
+            color: var(--dark);
+            margin-top: 20px;
+        }
+        
+        .manifesto-content p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #444;
+        }
+        
+        .manifesto-content ol {
+            margin-left: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .manifesto-content ol li {
+            margin-bottom: 20px;
+            line-height: 1.7;
+            padding-left: 10px;
+        }
+        
+        .manifesto-content ol li strong:first-child {
+            color: var(--primary);
+        }
+        
+        .manifesto-content ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .manifesto-content ul li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        blockquote {
+            border-left: 4px solid var(--primary);
+            padding: 25px;
+            margin: 30px 0;
+            background: linear-gradient(135deg, rgba(108, 99, 255, 0.1) 0%, rgba(74, 68, 230, 0.1) 100%);
+            font-style: italic;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+        
+        blockquote p {
+            margin: 0;
+            font-size: 1.2rem;
+            color: var(--dark);
+        }
+        
+        .promises-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .promise-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 4px solid var(--primary);
+        }
+        
+        .promise-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .promise-card h3 {
+            text-align: center;
+            margin-top: 0;
+            color: var(--primary);
+            background: rgba(108, 99, 255, 0.1);
+            padding: 10px;
+            border-radius: var(--border-radius);
+        }
+        
+        .cta-section {
+            margin-top: 50px;
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(108, 99, 255, 0.3);
+        }
+        
+        .cta-section h2 {
+            color: white;
+            margin-top: 0;
+        }
+        
+        .cta-section h2:after {
+            background: white;
+        }
+        
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .centered {
+            text-align: center;
+        }
+        
+        /* Flyer styles */
+        .flyer-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            padding: 40px;
+            position: relative;
+        }
+        
+        .flyer-container:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+        
+        .flyer-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--light-gray);
+        }
+        
+        .flyer-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .flyer-header p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            font-weight: 500;
+        }
+        
+        /* Section colors */
+        .core-beliefs {
+            background: rgba(230, 233, 255, 0.5);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+        }
+        
+        .our-promises {
+            background: rgba(255, 248, 230, 0.5);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+        }
+        
+        .soul-sovereignty {
+            background: rgba(230, 255, 240, 0.5);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+        }
+        
+        .join-us {
+            background: rgba(255, 230, 240, 0.5);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+        }
+        
+        /* Contact section */
+        .contact-section {
+            text-align: center;
+            margin: 50px 0;
+            padding: 30px;
+            background: rgba(108, 99, 255, 0.05);
+            border-radius: var(--border-radius);
+        }
+        
+        .contact-section h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .social-links-center {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .social-links-center a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        
+        .social-links-center a:hover {
+            background: var(--secondary);
+            transform: translateY(-5px);
+        }
+        
+        @media (max-width: 768px) {
+            .promises-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .manifesto-content {
+                padding: 0 10px;
+            }
+            
+            .flyer-container {
+                padding: 20px;
+                margin: 10px;
+            }
+            
+            .flyer-header h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Animation classes */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Moyo<span>ONI</span></a>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Manifesto Section -->
+    <section id="manifesto">
+        <div class="container">
+            <div class="flyer-container">
+                <div class="flyer-header">
+                    <h1>The Ifá-Omolúàbí Manifesto</h1>
+                    <p>A Call for Yoruba Renewal—Rooted in Wisdom, Guided by Character</p>
+                </div>
+                
+                <div class="manifesto-content">
+                    <p>We, the sons and daughters of Odùduwà, declare this truth:</p>
+                    
+                    <blockquote>
+                        <p><strong>To be Yoruba is not just about where we come from—but how we live.</strong><br>
+                        And how we live must be guided by <strong>Ìwà Pẹ̀lẹ́</strong>—good character.</p>
+                    </blockquote>
+
+                    <p>For too long, we have borrowed broken systems from afar while neglecting the deep wisdom our ancestors left us. This ends now.</p>
+
+                    <p>We offer not a return to the past, but a <strong>renewal of our future</strong>—built on <strong>Ifá logic</strong>, <strong>Omolúàbí ethics</strong>, and <strong>modern innovation</strong>.</p>
+
+                    <div class="core-beliefs">
+                        <h2 class="animate-on-scroll">Our Core Beliefs</h2>
+                        
+                        <ol>
+                            <li class="animate-on-scroll"><strong>Ifá is not just religion—it's reason.</strong><br>
+                            Our 256 Odù form a binary knowledge system older than modern computing. It is philosophy, science, law, and ethics in one. We will teach it in schools, use it in governance, and honor it as our intellectual heritage.</li>
+                            
+                            <li class="animate-on-scroll"><strong>Character comes before credentials.</strong><br>
+                            No one should lead, manage public funds, or hold power without proven integrity. "<strong>Ìwà l'ẹwà</strong>"—character is true beauty. We will audit character like we audit budgets.</li>
+                            
+                            <li class="animate-on-scroll"><strong>Power must be shared, not hoarded.</strong><br>
+                            Leadership requires <strong>Iforowero</strong>—consultation. Elders, youth, women (including Iyanifá), settlers, and minorities all have a voice. True governance listens.</li>
+                            
+                            <li class="animate-on-scroll"><strong>The earth is sacred—not a resource to exploit.</strong><br>
+                            Rivers like Ọ̀ṣun and Iyemoja are not dumping grounds. Sacred groves are not real estate. Our ecology is part of our spirituality. We protect both.</li>
+                            
+                            <li class="animate-on-scroll"><strong>Wealth is a trust, not a trophy.</strong><br>
+                            Money belongs to the community when it's meant for the community. We revive <strong>esusu</strong>, support local economies, and tax extreme wealth to fund justice—not luxury.</li>
+                            
+                            <li class="animate-on-scroll"><strong>Our children deserve Yoruba minds—not just English mouths.</strong><br>
+                            Education must begin in our language, use our stories, and train healer-scientists, ethical coders, and astronomer-farmers—rooted in <strong>Ifá-STEAM</strong>, not imported curricula that erase who we are.</li>
+                            
+                            <li class="animate-on-scroll"><strong>Diaspora Yorùbá are not visitors—they are co-builders.</strong><br>
+                            From Brazil to London, our people carry Òrìṣà memory in their bones. We grant them full citizenship, political voice, and a seat at the table.</li>
+                            
+                            <li class="animate-on-scroll"><strong>No one is a "settler" in their home.</strong><br>
+                            If you live here, work here, raise children here—you belong. We abolish the indigene/settler divide. Your <strong>Òrí</strong> (inner divinity) grants you dignity, not your grandfather's village.</li>
+                        </ol>
+                    </div>
+
+                    <div class="our-promises">
+                        <h2 class="animate-on-scroll">Our Promises</h2>
+                        
+                        <div class="promises-grid">
+                            <div class="promise-card animate-on-scroll">
+                                <h3>Within 3 years</h3>
+                                <ul>
+                                    <li>Make <strong>Isese Day</strong> a public holiday</li>
+                                    <li>Launch <strong>Ifá-STEM schools</strong> that teach coding through Odù</li>
+                                    <li>Require <strong>Character Audits</strong> for all public officials</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="promise-card animate-on-scroll">
+                                <h3>Within 7 years</h3>
+                                <ul>
+                                    <li>Integrate <strong>traditional healers</strong> into every clinic</li>
+                                    <li>Pass laws granting <strong>full rights to long-term residents</strong></li>
+                                    <li>Create a <strong>Diaspora Development Secretariat</strong> with real power</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="promise-card animate-on-scroll">
+                                <h3>Within 10 years</h3>
+                                <ul>
+                                    <li>Build an economy where <strong>esusu powers small business</strong></li>
+                                    <li>Ensure every river is clean, every forest protected, every child fluent in Yoruba</li>
+                                    <li>Become a global model of <strong>ethical, ecological, indigenous-led civilization</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="soul-sovereignty">
+                        <h2 class="animate-on-scroll">This Is Not Secession—It's Sovereignty of the Soul</h2>
+                        
+                        <p class="animate-on-scroll">We do not seek to break Nigeria apart.<br>
+                        We seek to <strong>heal it from within</strong>—by showing what governance looks like when it's <strong>honest, balanced, and wise</strong>.</p>
+
+                        <p class="animate-on-scroll">We reject the lie that tradition is backward.<br>
+                        We embrace the truth that <strong>our ancestors were scientists, philosophers, and system-builders</strong>.</p>
+
+                        <p class="animate-on-scroll">This manifesto is not for politicians alone.<br>
+                        It is for <strong>parents, teachers, artists, farmers, coders, healers, and youth</strong>—everyone ready to build a Yoruba world that is <strong>proud, just, and alive</strong>.</p>
+                    </div>
+
+                    <div class="join-us">
+                        <div class="cta-section animate-on-scroll">
+                            <h2>Join Us</h2>
+                            
+                            <p>This renewal begins with you.<br>
+                            Speak your language.<br>
+                            Honor your elders.<br>
+                            Demand leaders with character.<br>
+                            Teach your children their destiny—<strong>àṣẹ</strong>.</p>
+                            
+                            <p class="centered"><strong>Àṣẹ o!<br>
+                            Ìwà pẹ̀lẹ́ o!<br>
+                            Yorùbá ni wá!</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <a href="index.html" class="logo">Moyo<span>ONI</span></a>
+            <div class="social-links">
+                <a href="https://github.com/MoyoOni"><i class="fab fa-github"></i></a>
+                <a href="https://uk.linkedin.com/in/moyooni"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com/MoyoOniPro"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/ifamoyo_/"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="copyright">© 2025 Moyo Oni. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Add animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
